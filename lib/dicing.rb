@@ -1,5 +1,7 @@
 class Dice
-  def roll(n=1)
+  def roll()
     rand(6)+1
+  end
+  def roll_several_times(a)
   end
 end
