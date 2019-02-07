@@ -24,7 +24,7 @@ describe Dice do
 
   it "After rolling n times, we should receive an array with the size of n" do
     dice = Dice.new()
-    expect(dice.roll_several_times(5).class==Array && dice.roll_several_times.size==5).to eq true
+    expect(dice.roll_several_times(5).class==Array && dice.roll_several_times(5).size==5).to eq true
   end
 
 
