@@ -35,7 +35,6 @@ require "./lib/dicing.rb"
 dice = Dice.new()
 a = dice.roll()
 b = dice.roll()
-a - b # it should return true, but at first it returns false.
 dice.roll(4)
 ,,,
 

@@ -11,8 +11,8 @@ describe Dice do
 
   it "rolling a dice will return a random number between 1 and 6." do
     dice = Dice.new()
-    ar = 100.times.map{ dice.roll()}
-    expect(ar.uniq.sort).to eq (1..6).to_a
+    expect(dice).to receive(:rand).and_return(3)
+    expect(dice.roll).to eq 4
   end
 
   it "rolling can be done for several dices" do
