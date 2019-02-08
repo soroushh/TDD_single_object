@@ -22,8 +22,15 @@ describe Dice do
 
   it "After rolling n times, we should receive an array with the size of n" do
     dice = Dice.new()
-    expect(dice.roll(5).class==Array && dice.roll(5).size==5).to eq true
+    ar = dice.roll(5)
+    expect(ar.class==Array && ar.length ==5 ).to eq true
   end
+  it "After rolling n times, we should receive a number sum of all rolls." do
+    dice = Dice.new()
+    ar = dice.roll(3)
+    point = ar.sum
+    expect(dice.result).to eq point
 
+  end
 
 end

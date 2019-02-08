@@ -17,7 +17,7 @@ require "./lib/dicing.rb"
 dice = Dice.new()
 a = dice.roll()
 b = dice.roll()
-a - b # it should return true, but at first it returns false.
+a - b = 0 # it should return true, but at first it returns false.
 ,,,
 
 ,,,
@@ -36,5 +36,15 @@ dice = Dice.new()
 a = dice.roll()
 b = dice.roll()
 a - b # it should return true, but at first it returns false.
-dice.roll_several_times(4)
+dice.roll(4)
+,,,
+
+,,, # we want to see the result of our rolling for more than 1 time:
+require "./lib/dicing.rb"
+dice = Dice.new()
+a = dice.roll()
+b = dice.roll()
+a - b # it should return true, but at first it returns false.
+dice.roll(4)
+dice.result()
 ,,,
