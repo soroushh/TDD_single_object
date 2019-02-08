@@ -17,12 +17,12 @@ describe Dice do
 
   it "rolling can be done for several dices" do
     dice = Dice.new()
-    dice.roll_several_times(4)
+    dice.roll(4)
   end
 
   it "After rolling n times, we should receive an array with the size of n" do
     dice = Dice.new()
-    expect(dice.roll_several_times(5).class==Array && dice.roll_several_times(5).size==5).to eq true
+    expect(dice.roll(5).class==Array && dice.roll(5).size==5).to eq true
   end
 
 

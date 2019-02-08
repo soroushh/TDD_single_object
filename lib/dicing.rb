@@ -1,10 +1,14 @@
 class Dice
-  def roll()
-    rand(6)+1
+  def roll(n=1)
+    if one_argument?(n)==true
+      return rand(6)+1
+    else
+      ar = []
+      n.times{ar<< rand(6)+1}
+      return ar
+    end
   end
-  def roll_several_times(a)
-    ar = []
-    a.times{ar << roll}
-    return ar
+  def one_argument?(a)
+    a==1?true:false
   end
 end
