@@ -11,10 +11,8 @@ describe Dice do
 
   it "rolling a dice will return a random number between 1 and 6." do
     dice = Dice.new()
-    a = dice.roll
-    b = dice.roll
-    c = dice.roll
-    expect(a>b || b>a || b>c || c>b).to eq true
+    ar = 100.times.map{ dice.roll()}
+    expect(ar.uniq.sort).to eq (1..6).to_a
   end
 
   it "rolling can be done for several dices" do
